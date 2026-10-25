@@ -72,7 +72,7 @@ export function ContestPhaseDisplay({
     const heroVisual = phase.heroSegment
         ? resolveSegmentVisualState(phase.heroSegment)
         : "future";
-    const heroBg = phase.heroSegment ? TOUR_VISUAL_BG[heroVisual] : "#e8dfd0";
+    const heroBg = phase.heroSegment ? TOUR_VISUAL_BG[heroVisual] : "var(--bg-sunken)";
     const heroIconPx = HERO_ICON_PX[variant];
     const clickable = variant === "strip" && !!onOpenFocusPage;
 

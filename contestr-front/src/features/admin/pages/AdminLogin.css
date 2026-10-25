@@ -30,7 +30,7 @@
 
 .admin-login-title {
     margin: 0 0 0.65rem;
-    color: #bf9298;
+    color: var(--accent);
     font-size: var(--fs-h1);
     text-align: center;
 }
@@ -44,9 +44,9 @@
     flex-direction: column;
     gap: var(--space-s);
     padding: var(--space-m);
-    border: 1px solid #e0dcd0;
+    border: 1px solid var(--border-default);
     border-radius: 0.75rem;
-    background: #fff;
+    background: var(--bg-raised);
     box-shadow: 0 2px 12px rgba(79, 78, 78, 0.06);
 }
 
@@ -59,7 +59,7 @@
 .admin-login-field span {
     font-family: "Montserrat Alternates", sans-serif;
     font-size: var(--fs-button);
-    color: #4f4e4e;
+    color: var(--text-primary);
 }
 
 .admin-login-field input {
@@ -68,19 +68,19 @@
     font-family: "Anonymous Pro", sans-serif;
     font-size: var(--fs-p);
     padding: 0.7rem 0.85rem;
-    border: 1px solid #e0dcd0;
+    border: 1px solid var(--border-default);
     border-radius: 0.65rem;
-    background: #fff;
-    color: #4f4e4e;
+    background: var(--bg-raised);
+    color: var(--text-primary);
 }
 
 .admin-login-field input::placeholder {
-    color: #a8a6a0;
+    color: var(--text-muted);
 }
 
 .admin-login-field input:focus {
     outline: none;
-    border-color: #e58995;
+    border-color: var(--accent);
 }
 
 .admin-login-btn {
@@ -89,14 +89,14 @@
     padding: 0.75rem 1.25rem;
     border: none;
     border-radius: 0.65rem;
-    background: #bf9298;
-    color: #fbf8f3;
+    background: var(--accent);
+    color: var(--accent-on);
     cursor: pointer;
     transition: background 0.2s ease;
 }
 
 .admin-login-btn:hover:not(:disabled) {
-    background: #e58995;
+    background: var(--accent-hover);
 }
 
 .admin-login-btn:disabled {
@@ -115,16 +115,16 @@
 .admin-login-message--error {
     padding: 0.75rem 1rem;
     border-radius: 0.65rem;
-    border: 1px solid #e58995;
-    background: #fce8ec;
-    color: #a63d52;
-    box-shadow: 0 2px 8px rgba(166, 61, 82, 0.12);
+    border: 1px solid var(--accent);
+    background: var(--accent-subtle);
+    color: var(--danger);
+    box-shadow: 0 2px 8px color-mix(in oklch, var(--danger) 12%, transparent);
 }
 
 .admin-login-greeting {
     font-family: "Anonymous Pro", sans-serif;
     font-size: var(--fs-p);
-    color: #6b6a68;
+    color: var(--text-secondary);
     margin: 0;
     text-align: center;
 }
@@ -133,13 +133,13 @@
     display: block;
     font-family: "Montserrat Alternates", sans-serif;
     font-size: var(--fs-button);
-    color: #6b6a68;
+    color: var(--text-secondary);
     text-align: center;
     text-decoration: none;
 }
 
 .admin-login-link:hover {
-    color: #e58995;
+    color: var(--accent);
 }
 
 .admin-timetable {
@@ -164,7 +164,7 @@
 .admin-section-head h2,
 .admin-tool-block h3 {
     margin: 0;
-    color: #4f4e4e;
+    color: var(--text-primary);
     text-align: left;
 }
 
@@ -184,10 +184,10 @@
     font-family: "Anonymous Pro", sans-serif;
     font-size: var(--fs-p);
     padding: 0.55rem 0.7rem;
-    border: 1px solid #e0dcd0;
+    border: 1px solid var(--border-default);
     border-radius: 0.5rem;
-    background: #fff;
-    color: #4f4e4e;
+    background: var(--bg-raised);
+    color: var(--text-primary);
 }
 
 .admin-contest-inputs select {
@@ -216,12 +216,12 @@
 .admin-timetable-header {
     font-family: "Montserrat Alternates", sans-serif;
     font-size: var(--fs-button);
-    color: #6b6a68;
+    color: var(--text-secondary);
 }
 
 .admin-timetable-row > span:first-child {
     font-family: "Anonymous Pro", sans-serif;
-    color: #6b6a68;
+    color: var(--text-secondary);
 }
 
 .admin-status-badge {
@@ -233,21 +233,21 @@
     border-radius: 0.5rem;
     font-family: "Anonymous Pro", sans-serif;
     font-size: var(--fs-button);
-    border: 1px solid #e0dcd0;
-    background: #fff;
-    color: #6b6a68;
+    border: 1px solid var(--border-default);
+    background: var(--bg-raised);
+    color: var(--text-secondary);
 }
 
 .admin-status-badge--done {
-    border-color: #bdd7bf;
-    background: #f4fbf4;
-    color: #456f49;
+    border-color: var(--success-bg);
+    background: var(--success-bg);
+    color: var(--success-text);
 }
 
 .admin-status-badge--pending {
-    border-color: #e0dcd0;
-    background: #fbf8f3;
-    color: #6b6a68;
+    border-color: var(--border-default);
+    background: var(--bg-canvas);
+    color: var(--text-secondary);
 }
 
 .admin-icon-btn,
@@ -258,17 +258,17 @@
     gap: 0.45rem;
     min-height: 2.5rem;
     padding: 0.55rem 0.85rem;
-    border: 1px solid #e0dcd0;
+    border: 1px solid var(--border-default);
     border-radius: 0.5rem;
-    background: #fff;
-    color: #4f4e4e;
+    background: var(--bg-raised);
+    color: var(--text-primary);
     cursor: pointer;
 }
 
 .admin-icon-btn:hover:not(:disabled),
 .admin-row-btn:hover:not(:disabled) {
-    border-color: #e58995;
-    color: #8b5a62;
+    border-color: var(--accent);
+    color: var(--accent-hover);
 }
 
 .admin-icon-btn:disabled,
@@ -294,14 +294,14 @@
 }
 
 .admin-primary-btn {
-    background: #bf9298;
-    border-color: #bf9298;
-    color: #fbf8f3;
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--accent-on);
 }
 
 .admin-danger-btn {
-    border-color: #d7a3a8;
-    color: #8b5a62;
+    border-color: var(--accent-hover);
+    color: var(--accent-hover);
 }
 
 .admin-toolbar {

@@ -1,15 +1,15 @@
 <svg width="1548" height="1222" viewBox="0 0 1548 1222" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g filter="url(#filter0_f_67_36)">
-        <circle cx="292.5" cy="206.5" r="176.5" fill="#BF9298" fill-opacity="0.2"/>
+        <circle cx="292.5" cy="206.5" r="176.5" fill="#4f5bd5" fill-opacity="0.12"/>
     </g>
     <g filter="url(#filter1_f_67_36)">
-        <circle cx="1077.5" cy="569.5" r="176.5" fill="#BF9298" fill-opacity="0.53"/>
+        <circle cx="1077.5" cy="569.5" r="176.5" fill="#4f5bd5" fill-opacity="0.2"/>
     </g>
     <g filter="url(#filter2_f_67_36)">
-        <circle cx="182.5" cy="730.5" r="176.5" fill="#FFF9D2"/>
+        <circle cx="182.5" cy="730.5" r="176.5" fill="#e8eefc"/>
     </g>
     <g filter="url(#filter3_f_67_36)">
-        <circle cx="1111.5" cy="1162.5" r="176.5" fill="#FFF9D2"/>
+        <circle cx="1111.5" cy="1162.5" r="176.5" fill="#e8eefc"/>
     </g>
     <defs>
         <filter id="filter0_f_67_36" x="-8" y="-94" width="601" height="601" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">

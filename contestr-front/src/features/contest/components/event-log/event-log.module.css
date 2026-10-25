@@ -23,7 +23,7 @@
 .eventLogFilterLabel {
     font-family: "Anonymous Pro", monospace;
     font-size: var(--fs-button);
-    color: #6b6a68;
+    color: var(--text-secondary);
     line-height: 1.25;
 }
 
@@ -45,8 +45,8 @@
     width: 2.35rem;
     height: 1.3rem;
     border-radius: 999px;
-    background: #d8d4cb;
-    box-shadow: inset 0 1px 2px rgba(79, 78, 78, 0.1);
+    background: var(--border-strong);
+    box-shadow: inset 0 1px 2px color-mix(in oklch, var(--text-primary) 10%, transparent);
     transition: background-color 0.2s ease;
 }
 
@@ -58,13 +58,13 @@
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
-    background: #fff;
-    box-shadow: 0 1px 3px rgba(79, 78, 78, 0.18);
+    background: var(--bg-raised);
+    box-shadow: 0 1px 3px color-mix(in oklch, var(--text-primary) 18%, transparent);
     transition: transform 0.2s ease;
 }
 
 .eventLogFilterInput:checked + .eventLogFilterSwitch {
-    background: #9a7ab0;
+    background: var(--accent);
 }
 
 .eventLogFilterInput:checked + .eventLogFilterSwitch::after {
@@ -72,7 +72,7 @@
 }
 
 .eventLogFilterInput:focus-visible + .eventLogFilterSwitch {
-    outline: 2px solid #b39bc9;
+    outline: 2px solid var(--info-border);
     outline-offset: 2px;
 }
 
@@ -81,7 +81,7 @@
     padding: 0.5rem 0.85rem;
     font-family: "Anonymous Pro", monospace;
     font-size: var(--fs-button);
-    color: #8a8782;
+    color: var(--text-muted);
 }
 
 .eventLogPanel {
@@ -104,14 +104,14 @@
     font-family: "Montserrat Alternates", sans-serif;
     font-size: 0.9em;
     font-weight: 600;
-    color: #6b6a68;
+    color: var(--text-secondary);
     letter-spacing: 0.02em;
 }
 
 .eventLogTourCard {
-    border: 1px solid #e0dcd0;
+    border: 1px solid var(--border-default);
     border-radius: 0.5rem;
-    background: #fbf8f3;
+    background: var(--bg-canvas);
     width: fit-content;
     max-width: 100%;
     padding: 0.45rem 0.85rem;
@@ -131,7 +131,7 @@
 }
 
 .eventLogList .eventLogItem:not(:last-child) .eventLogLine {
-    border-bottom: 1px solid #ebe8e1;
+    border-bottom: 1px solid var(--bg-sunken);
 }
 
 .eventLogItem {
@@ -145,7 +145,7 @@
     font-family: "Anonymous Pro", monospace;
     font-size: var(--fs-button);
     line-height: 1.55;
-    color: #4f4e4e;
+    color: var(--text-primary);
     padding: 0.28rem 0;
     border-bottom: none;
 }
@@ -154,7 +154,7 @@
     from {
         opacity: 0;
         transform: translateY(-0.4rem);
-        background-color: #e8f5e9;
+        background-color: var(--success-bg);
     }
     to {
         opacity: 1;
@@ -176,14 +176,14 @@
 
 .eventLogLineMuted,
 .eventLogLineRejected {
-    color: #8a8782;
+    color: var(--text-muted);
 }
 
 .eventLogLineMuted .eventChip,
 .eventLogLineRejected .eventChip {
-    color: #8a8782;
-    border-color: #d8d4cb;
-    background: #f5f3ef;
+    color: var(--text-muted);
+    border-color: var(--border-strong);
+    background: var(--bg-surface);
 }
 
 .eventLogTimeCell {
@@ -203,10 +203,10 @@
     justify-content: center;
     flex-shrink: 0;
     padding: 0.1em 0.35em;
-    border: 1px solid #b39bc9;
+    border: 1px solid var(--info-border);
     border-radius: 0.35rem;
-    background: #efe8f5;
-    color: #5c4578;
+    background: var(--accent-subtle);
+    color: var(--info-text);
     line-height: 1;
 }
 
@@ -215,19 +215,19 @@
     width: 1em;
     height: 1em;
     flex-shrink: 0;
-    color: #5c4578;
+    color: var(--info-text);
 }
 
 .eventLogLineMuted .eventOutsideTourChip,
 .eventLogLineRejected .eventOutsideTourChip {
-    border-color: #c9bdd8;
-    background: #f3eff7;
-    color: #7a6a92;
+    border-color: var(--info-border);
+    background: var(--accent-subtle);
+    color: var(--info-text);
 }
 
 .eventLogLineMuted .eventOutsideTourIcon,
 .eventLogLineRejected .eventOutsideTourIcon {
-    color: #7a6a92;
+    color: var(--info-text);
 }
 
 .eventLogName {
@@ -287,9 +287,9 @@
 }
 
 .eventBonusChipFirst {
-    background: #e8f3ea;
-    border-color: #9cbfa0;
-    color: #3d5c42;
+    background: var(--success-bg);
+    border-color: var(--success-border);
+    color: var(--success-text);
 }
 
 .eventBonusIcon {
@@ -305,22 +305,22 @@
 
 .eventLogPoints .eventChip {
     font-variant-numeric: tabular-nums;
-    color: #4f4e4e;
+    color: var(--text-primary);
 }
 
 .eventPointsMuted {
-    color: #8a8782;
-    border-color: #d8d4cb;
-    background: #f5f3ef;
+    color: var(--text-muted);
+    border-color: var(--border-strong);
+    background: var(--bg-surface);
 }
 
 .eventChip {
     display: inline-block;
     padding: 0.05em 0.5em;
     margin: 0;
-    border: 1px solid #c4bfb3;
+    border: 1px solid var(--border-strong);
     border-radius: 0.35rem;
-    background: #fff;
+    background: var(--bg-raised);
     line-height: 1.25;
     vertical-align: baseline;
 }

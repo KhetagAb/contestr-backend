@@ -15,18 +15,18 @@
     align-items: center;
     gap: 0.4rem;
     padding: 0.35rem 0.65rem;
-    border: 1px solid #e0dcd0;
+    border: 1px solid var(--border-default);
     border-radius: 0.4rem;
-    background: #f5f3eb;
+    background: var(--bg-surface);
     font-family: "Montserrat Alternates", sans-serif;
     font-size: var(--fs-caption, 0.85rem);
     font-weight: 600;
-    color: #4f4e4e;
+    color: var(--text-primary);
     cursor: pointer;
 }
 
 .backBtn:hover {
-    background: #ebe8e1;
+    background: var(--bg-sunken);
 }
 
 .focusCenter {
@@ -54,7 +54,7 @@
     font-family: "Montserrat Alternates", sans-serif;
     font-size: var(--fs-h1, 1.5rem);
     font-weight: 600;
-    color: #4f4e4e;
+    color: var(--text-primary);
     line-height: 1.2;
 }
 
@@ -62,7 +62,7 @@
     margin: 0;
     font-family: "Montserrat Alternates", sans-serif;
     font-size: var(--fs-p);
-    color: #6b6860;
+    color: var(--text-secondary);
     text-align: center;
 }
 

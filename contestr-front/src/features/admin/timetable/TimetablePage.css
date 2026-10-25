@@ -13,7 +13,7 @@
 .tt-contest-divider {
     margin: 0 0 var(--space-m);
     border: 0;
-    border-top: 2px solid #d8d2c4;
+    border-top: 2px solid var(--border-default);
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
 }
 
@@ -42,7 +42,7 @@
     font-size: 1.05rem;
     font-weight: 600;
     line-height: 1.35;
-    color: #4f4e4e;
+    color: var(--text-primary);
 }
 
 .tt-contest-header__toggle-btn {
@@ -56,17 +56,17 @@
     border: none;
     border-radius: 4px;
     background: transparent;
-    color: #8a8780;
+    color: var(--text-muted);
     cursor: pointer;
 }
 
 .tt-contest-header__toggle-btn:hover {
-    color: #4f4e4e;
-    background: rgba(79, 78, 78, 0.08);
+    color: var(--text-primary);
+    background: color-mix(in oklch, var(--text-primary) 8%, transparent);
 }
 
 .tt-contest-header--collapsed .tt-contest-header__title {
-    color: #8a8780;
+    color: var(--text-muted);
 }
 
 .tt-contest-block--collapsed {
@@ -78,7 +78,7 @@
     font-family: "Anonymous Pro", sans-serif;
     font-size: var(--fs-p);
     font-weight: 400;
-    color: #8a8780;
+    color: var(--text-muted);
 }
 
 .tt-contest-header__meta {
@@ -95,13 +95,13 @@
     font-family: "Anonymous Pro", sans-serif;
     font-size: var(--fs-button);
     line-height: 1.35;
-    color: #6b6a68;
+    color: var(--text-secondary);
     white-space: nowrap;
 }
 
 .tt-contest-header__elapsed strong {
     font-weight: 700;
-    color: #4f4e4e;
+    color: var(--text-primary);
 }
 
 .tt-autostart-toggle {
@@ -116,7 +116,7 @@
 .tt-autostart-toggle__label {
     font-family: "Anonymous Pro", sans-serif;
     font-size: var(--fs-button);
-    color: #6b6a68;
+    color: var(--text-secondary);
     line-height: 1.25;
 }
 
@@ -138,8 +138,8 @@
     width: 2.35rem;
     height: 1.3rem;
     border-radius: 999px;
-    background: #d0ccc3;
-    box-shadow: inset 0 1px 2px rgba(79, 78, 78, 0.12);
+    background: var(--border-strong);
+    box-shadow: inset 0 1px 2px color-mix(in oklch, var(--text-primary) 12%, transparent);
     transition: background-color 0.2s ease;
 }
 
@@ -151,13 +151,13 @@
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
-    background: #fff;
-    box-shadow: 0 1px 3px rgba(79, 78, 78, 0.2);
+    background: var(--bg-raised);
+    box-shadow: 0 1px 3px color-mix(in oklch, var(--text-primary) 20%, transparent);
     transition: transform 0.2s ease;
 }
 
 .tt-autostart-toggle__input:checked + .tt-autostart-switch {
-    background: #8b5a62;
+    background: var(--accent-hover);
 }
 
 .tt-autostart-toggle__input:checked + .tt-autostart-switch::after {
@@ -165,7 +165,7 @@
 }
 
 .tt-autostart-toggle__input:focus-visible + .tt-autostart-switch {
-    outline: 2px solid #bf9298;
+    outline: 2px solid var(--accent);
     outline-offset: 2px;
 }
 
@@ -183,9 +183,9 @@
     align-items: center;
     gap: var(--tt-next-banner-gap-actions);
     padding: 0.65rem 0.85rem;
-    border: 1px solid #e0dcd0;
+    border: 1px solid var(--border-default);
     border-radius: 0.65rem;
-    background: #fbf8f3;
+    background: var(--bg-canvas);
 }
 
 .tt-next-banner__content {
@@ -212,7 +212,7 @@
 .tt-next-banner__sep {
     flex-shrink: 0;
     align-self: center;
-    color: #a8a6a0;
+    color: var(--text-muted);
     font-family: "Anonymous Pro", sans-serif;
     font-size: 1.1rem;
     line-height: 1;
@@ -243,7 +243,7 @@
 
 .tt-next-banner__through-warn {
     flex-shrink: 0;
-    color: #c9a02d;
+    color: var(--warning-text);
     animation: tt-through-warn-blink 1.1s ease-in-out infinite;
 }
 
@@ -251,12 +251,12 @@
     0%,
     100% {
         opacity: 1;
-        color: #c9a02d;
+        color: var(--warning-text);
     }
 
     50% {
         opacity: 0.35;
-        color: #a8861f;
+        color: var(--warning-border);
     }
 }
 
@@ -265,7 +265,7 @@
     font-family: "Montserrat Alternates", sans-serif;
     font-size: var(--fs-button);
     font-weight: 600;
-    color: #6b6a68;
+    color: var(--text-secondary);
     white-space: nowrap;
 }
 
@@ -274,9 +274,9 @@
     align-items: center;
     gap: 0.28rem;
     padding: 0.1rem 0.5rem 0.1rem 0.38rem;
-    border: 1px solid #c4bfb3;
+    border: 1px solid var(--border-strong);
     border-radius: 0.35rem;
-    background: #fff;
+    background: var(--bg-raised);
     white-space: nowrap;
     line-height: 1.25;
     vertical-align: baseline;
@@ -286,7 +286,7 @@
     display: inline-flex;
     align-items: center;
     line-height: 0;
-    color: #8b5a62;
+    color: var(--accent-hover);
 }
 
 .tt-next-banner__tour-chip-icon .tt-status-icon-wrap svg,
@@ -305,7 +305,7 @@
     font-family: "Montserrat Alternates", sans-serif;
     font-size: var(--fs-p);
     font-weight: 600;
-    color: #4f4e4e;
+    color: var(--text-primary);
 }
 
 .tt-next-banner__meta-part {
@@ -313,13 +313,13 @@
     font-family: "Anonymous Pro", sans-serif;
     font-size: var(--fs-button);
     line-height: 1.35;
-    color: #6b6a68;
+    color: var(--text-secondary);
     white-space: nowrap;
 }
 
 .tt-next-banner__meta-part strong {
     font-weight: 700;
-    color: #4f4e4e;
+    color: var(--text-primary);
 }
 
 .tt-next-banner__actions {
@@ -344,40 +344,40 @@
 }
 
 .tt-axis {
-    /* Палитра шкалы — в тон #FBF8F3, #f0ede6, #e0dcd0 и мягкому #bdd7bf */
+    /* Палитра шкалы — в тон var(--bg-canvas), #f0ede6, var(--border-default) и мягкому var(--success-bg) */
     --tt-icon-btn-size: 1.28rem;
     --tt-icon-btn-gap: 0.1rem;
     /* Высота под столбик из 3 кнопок (+, пауза, удалить) + отступы inner */
     --tt-axis-block-height: calc(
         1rem + 3 * var(--tt-icon-btn-size) + 2 * var(--tt-icon-btn-gap)
     );
-    --tt-tour-past-bg: #a8b8a6;
-    --tt-tour-past-fg: #526352;
-    --tt-tour-active-bg: #bdd7bf;
-    --tt-tour-active-fg: #526352;
-    --tt-tour-future-bg: #e8dfd0;
-    --tt-tour-future-fg: #6b6a68;
+    --tt-tour-past-bg: var(--success-border);
+    --tt-tour-past-fg: var(--success-text);
+    --tt-tour-active-bg: var(--success-bg);
+    --tt-tour-active-fg: var(--success-text);
+    --tt-tour-future-bg: var(--bg-sunken);
+    --tt-tour-future-fg: var(--text-secondary);
     --tt-tour-gap: 2px;
     --tt-tour-radius: 0.4rem;
     --tt-segment-icon-size: 14px;
 
     margin-bottom: 0;
     padding: 0.85rem 1rem 0.65rem;
-    border: 1px solid #e0dcd0;
+    border: 1px solid var(--border-default);
     border-radius: 0.65rem;
-    background: #fff;
+    background: var(--bg-raised);
     transition: border-color 0.2s ease;
 }
 
 .tt-axis--dirty {
-    border-color: #bf9298;
+    border-color: var(--accent);
 }
 
 .tt-axis__caption {
     margin: 0 0 0.65rem;
     font-family: "Montserrat Alternates", sans-serif;
     font-size: var(--fs-button);
-    color: #4f4e4e;
+    color: var(--text-primary);
 }
 
 .tt-axis__scale {
@@ -391,7 +391,7 @@
     overflow-y: visible;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
-    scrollbar-color: #d0ccc3 transparent;
+    scrollbar-color: var(--border-strong) transparent;
 }
 
 .tt-axis__scale::-webkit-scrollbar {
@@ -399,7 +399,7 @@
 }
 
 .tt-axis__scale::-webkit-scrollbar-thumb {
-    background: #d0ccc3;
+    background: var(--border-strong);
     border-radius: 999px;
 }
 
@@ -430,7 +430,7 @@
 .tt-axis__block--expandable .tt-axis__block-inner {
     width: 100%;
     height: 100%;
-    border: 0.5px solid rgba(63, 60, 55, 0.32);
+    border: 0.5px solid color-mix(in oklch, var(--text-primary) 32%, transparent);
     border-radius: var(--tt-tour-radius);
     box-sizing: border-box;
 }
@@ -453,7 +453,7 @@
     align-items: center;
     justify-content: center;
     pointer-events: none;
-    color: #5c5348;
+    color: var(--text-secondary);
 }
 
 .tt-axis__block--expandable .tt-axis__block-inner.tt-visual--past .tt-axis__segment-marker--tour {
@@ -539,10 +539,10 @@
     padding: 0.6rem 0.35rem 0.4rem 0.45rem;
     overflow: visible;
     box-sizing: border-box;
-    border: 0.5px solid rgba(63, 60, 55, 0.38);
+    border: 0.5px solid color-mix(in oklch, var(--text-primary) 38%, transparent);
     border-radius: var(--tt-tour-radius);
     box-shadow:
-        0 3px 14px rgba(79, 78, 78, 0.16),
+        0 3px 14px color-mix(in oklch, var(--text-primary) 16%, transparent),
         0 0 0 1px rgba(255, 255, 255, 0.45) inset;
 }
 
@@ -620,7 +620,7 @@
     width: var(--tt-segment-icon-size);
     height: var(--tt-segment-icon-size);
     line-height: 0;
-    color: #4f4e4e;
+    color: var(--text-primary);
 }
 
 .tt-axis__status-icon .tt-status-icon-wrap svg,
@@ -725,7 +725,7 @@
 .tt-axis__duration-value:focus,
 .tt-axis__duration-value:focus-visible {
     outline: none;
-    border-bottom-color: #bf9298;
+    border-bottom-color: var(--accent);
 }
 
 .tt-status-icon-wrap {
@@ -802,10 +802,10 @@
     border: none;
     border-radius: 0.3rem;
     background: rgba(255, 255, 255, 0.46);
-    color: #6b6a68;
+    color: var(--text-secondary);
     cursor: pointer;
     line-height: 0;
-    box-shadow: inset 0 0 0 1px rgba(107, 106, 104, 0.12);
+    box-shadow: inset 0 0 0 1px color-mix(in oklch, var(--text-secondary) 12%, transparent);
     transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
 }
 
@@ -816,23 +816,23 @@
 
 .tt-axis__icon-btn:hover {
     background: rgba(255, 255, 255, 0.72);
-    box-shadow: inset 0 0 0 1px rgba(139, 90, 98, 0.24);
-    color: #8b5a62;
+    box-shadow: inset 0 0 0 1px color-mix(in oklch, var(--accent) 24%, transparent);
+    color: var(--accent-hover);
 }
 
 .tt-axis__icon-btn--danger:hover {
-    color: #a63d52;
+    color: var(--danger);
 }
 
 .tt-axis__icon-btn--pause-set,
 .tt-axis__icon-btn--pause-on {
-    color: #7a6b52;
+    color: var(--warning-text);
 }
 
 .tt-axis__icon-btn--pause:hover,
 .tt-axis__icon-btn--pause-set:hover,
 .tt-axis__icon-btn--pause-on:hover {
-    color: #6b5a3e;
+    color: var(--text-primary);
 }
 
 .tt-axis__block.tt-visual--past,
@@ -879,7 +879,7 @@
     font-family: "Anonymous Pro", monospace;
     font-size: 0.65rem;
     line-height: 1;
-    color: #a8a6a0;
+    color: var(--text-muted);
     user-select: none;
 }
 
@@ -899,14 +899,14 @@
     font-family: "Anonymous Pro", monospace;
     font-size: 0.58rem;
     line-height: 1.1;
-    color: #6b6a68;
+    color: var(--text-secondary);
     white-space: nowrap;
     letter-spacing: -0.02em;
 }
 
 .tt-empty {
     padding: var(--space-m);
-    border: 1px dashed #e0dcd0;
+    border: 1px dashed var(--border-default);
     border-radius: 0.65rem;
     text-align: center;
 }
@@ -914,13 +914,13 @@
 .tt-empty__title {
     margin: 0 0 0.35rem;
     font-family: "Montserrat Alternates", sans-serif;
-    color: #4f4e4e;
+    color: var(--text-primary);
 }
 
 .tt-empty__hint {
     margin: 0 0 var(--space-s);
     font-family: "Anonymous Pro", sans-serif;
-    color: #6b6a68;
+    color: var(--text-secondary);
 }
 
 .tt-empty__template {
@@ -951,11 +951,11 @@
 }
 
 .tt-message--success {
-    color: #456f49;
+    color: var(--success-text);
 }
 
 .tt-message--info {
-    color: #6b6a68;
+    color: var(--text-secondary);
 }
 
 .visually-hidden {
@@ -1013,6 +1013,6 @@
 .tt-next-banner__pause-icon {
     display: inline-flex;
     line-height: 0;
-    color: #5c5348;
+    color: var(--text-secondary);
 }
 

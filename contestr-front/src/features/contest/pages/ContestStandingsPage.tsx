@@ -50,46 +50,45 @@ function groupChipClassName(
     return styles.groupChip;
 }
 
-/** Фоны групп — тёплые оттенки в духе #fbf8f3 / event-log, но различимые */
+/** Фоны групп — холодные оттенки Arctic Slate, различимые между командами. */
 const teamColors = [
-    "#f9f3e8ee",
-    "#efe8f5ee",
-    "#e8f3eaee",
-    "#f5ebe8ee",
-    "#e8eef5ee",
-    "#f5f0e8ee",
-    "#ebe8e1ee",
-    "#f0ebe8ee",
-    "#e8f5f0ee",
-    "#f5e8f0ee",
-    "#f2efe8ee",
-    "#ebe5f0ee",
-    "#e8f0ebee",
-    "#f8f3e8ee",
-    "#efeae8ee",
-    "#e5eef5ee",
-    "#f0e8f2ee",
-    "#e8f2f5ee",
-    "#f5f2e8ee",
-    "#ebe8f5ee",
-    "#f3ebe8ee",
-    "#e8ebe8ee",
+    "oklch(0.95 0.025 255 / 0.92)",
+    "oklch(0.94 0.035 265 / 0.9)",
+    "oklch(0.95 0.03 145 / 0.88)",
+    "oklch(0.95 0.025 230 / 0.9)",
+    "oklch(0.94 0.03 295 / 0.88)",
+    "oklch(0.95 0.025 200 / 0.9)",
+    "oklch(0.955 0.015 255 / 0.94)",
+    "oklch(0.94 0.03 175 / 0.88)",
+    "oklch(0.95 0.02 280 / 0.9)",
+    "oklch(0.94 0.028 215 / 0.9)",
+    "oklch(0.95 0.03 155 / 0.86)",
+    "oklch(0.945 0.022 250 / 0.92)",
+    "oklch(0.94 0.032 310 / 0.86)",
+    "oklch(0.95 0.02 190 / 0.9)",
+    "oklch(0.955 0.018 265 / 0.92)",
+    "oklch(0.94 0.026 140 / 0.88)",
+    "oklch(0.95 0.02 240 / 0.9)",
+    "oklch(0.945 0.03 275 / 0.88)",
+    "oklch(0.95 0.018 210 / 0.92)",
+    "oklch(0.94 0.024 165 / 0.88)",
+    "oklch(0.955 0.02 255 / 0.9)",
+    "oklch(0.94 0.028 290 / 0.88)",
 ];
 
 function scoreToGreenColor(ratio: number) {
     if (ratio <= 0) return "transparent";
     const t = Math.min(1, Math.max(0, ratio));
     const eased = Math.pow(t, 0.68);
-    const r = Math.round(244 + (155 - 244) * eased);
-    const g = Math.round(249 + (192 - 249) * eased);
-    const b = Math.round(240 + (148 - 240) * eased);
-    const alpha = 0.68 + 0.32 * eased;
-    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+    const lightness = 0.94 - 0.16 * eased;
+    const chroma = 0.035 + 0.08 * eased;
+    const alpha = 0.72 + 0.28 * eased;
+    return `oklch(${lightness} ${chroma} 145 / ${alpha})`;
 }
 
 function taskCellBackground(score: number, globalMaxPositive: number) {
     if (score <= 0) {
-        return score < 0 ? "rgba(252, 232, 232, 0.5)" : "transparent";
+        return score < 0 ? "oklch(0.94 0.04 25 / 0.55)" : "transparent";
     }
     if (globalMaxPositive <= 0) return "transparent";
     return scoreToGreenColor(score / globalMaxPositive);
@@ -110,7 +109,7 @@ function globalMaxPositiveScore(rows: RegattaContestRow[] | undefined) {
 
 function rowBackgroundColor(row: RegattaContestRow): string {
     if (!row.team_number || row.team_number <= 0) {
-        return "#fbf8f3ee";
+        return "var(--bg-canvas)";
     }
     return teamColors[(row.team_number - 1) % teamColors.length];
 }

@@ -8,9 +8,9 @@
 }
 
 .toursListCard {
-    border: 1px solid #e0dcd0;
+    border: 1px solid var(--border-default);
     border-radius: 0.5rem;
-    background: #f5f3eb;
+    background: var(--bg-surface);
     box-sizing: border-box;
 }
 
@@ -70,14 +70,14 @@
     width: 18px;
     height: 18px;
     flex-shrink: 0;
-    color: #5c5a52;
+    color: var(--text-secondary);
 }
 
 .heroLabel {
     font-family: "Montserrat Alternates", sans-serif;
     font-size: 1.05rem;
     font-weight: 600;
-    color: #4f4e4e;
+    color: var(--text-primary);
     white-space: nowrap;
 }
 
@@ -85,7 +85,7 @@
     font-family: "Montserrat Alternates", sans-serif;
     font-size: 0.72rem;
     font-weight: 500;
-    color: #6b6860;
+    color: var(--text-secondary);
     text-transform: lowercase;
     line-height: 1.15;
 }
@@ -95,7 +95,7 @@
     font-size: 1.05rem;
     font-weight: 600;
     font-variant-numeric: tabular-nums;
-    color: #4f4e4e;
+    color: var(--text-primary);
     letter-spacing: 0.02em;
     line-height: 1.15;
 }
@@ -117,20 +117,20 @@
     font-family: "Montserrat Alternates", sans-serif;
     font-size: 0.72rem;
     font-weight: 600;
-    color: #6b6860;
+    color: var(--text-secondary);
     line-height: 1.15;
 }
 
 .emptyIcon {
     flex-shrink: 0;
-    color: #8a8578;
+    color: var(--text-muted);
 }
 
 .emptyText,
 .loadingText {
     font-family: "Montserrat Alternates", sans-serif;
     font-size: var(--fs-caption, 0.85rem);
-    color: #6b6860;
+    color: var(--text-secondary);
     text-align: center;
 }
 
@@ -142,8 +142,8 @@
 }
 
 .phaseCardClickable:hover {
-    border-color: #c9c4b8;
-    box-shadow: 0 2px 8px rgba(79, 78, 78, 0.08);
+    border-color: var(--border-strong);
+    box-shadow: 0 2px 8px color-mix(in oklch, var(--text-primary) 8%, transparent);
 }
 
 .currentTourCard.phaseCardClickable:hover {
@@ -151,7 +151,7 @@
 }
 
 .phaseCardClickable:focus-visible {
-    outline: 2px solid #e58995;
+    outline: 2px solid var(--accent);
     outline-offset: 2px;
 }
 

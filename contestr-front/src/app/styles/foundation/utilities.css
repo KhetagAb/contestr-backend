@@ -1,0 +1,8 @@
+/* foundation/utilities.css — .empty, .hidden */
+
+.empty {
+  color: var(--text-faint);
+  font-family: var(--font-ui);
+}
+
+.hidden { display: none !important; }

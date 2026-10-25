@@ -1,0 +1,76 @@
+/* shared/buttons.css — .btn + variants */
+
+.btn {
+  appearance: none;
+  border: 1px solid var(--chip-border);
+  background: var(--chip-bg);
+  color: var(--text);
+  border-radius: var(--radius-chip);
+  padding: 0.4rem 0.75rem;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn:hover:not(:disabled) {
+  border-color: var(--text-faint);
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn--primary {
+  background: var(--accent-violet);
+  border-color: var(--accent-violet);
+  color: var(--accent-on);
+}
+
+.btn--ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.btn--ghost:hover {
+  color: var(--text);
+}
+
+.btn--icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.15rem;
+  height: 2.15rem;
+  padding: 0;
+  flex: 0 0 auto;
+}
+
+.btn--icon__glyph {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex-shrink: 0;
+}
+
+.contest-head__actions .contest-head__job-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.btn--icon.is-busy .btn--icon__glyph {
+  animation: btn-icon-spin 0.85s linear infinite;
+}
+
+@keyframes btn-icon-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes btn-icon-pulse {
+  50% { opacity: 0.35; }
+}

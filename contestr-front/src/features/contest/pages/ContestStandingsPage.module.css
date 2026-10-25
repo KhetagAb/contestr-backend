@@ -12,7 +12,7 @@
     margin: var(--space-m, 1.25rem) 0 0;
     font-family: "Montserrat Alternates", sans-serif;
     font-size: var(--fs-body, 1rem);
-    color: #4f4e4e;
+    color: var(--text-primary);
 }
 
 .statusText a {
@@ -21,9 +21,9 @@
 }
 
 .standingsCard {
-    border: 1px solid #e0dcd0;
+    border: 1px solid var(--border-default);
     border-radius: 0.5rem;
-    background: #fbf8f3;
+    background: var(--bg-canvas);
     width: fit-content;
     max-width: 100%;
     overflow: hidden;
@@ -35,9 +35,9 @@
     font-family: "Montserrat Alternates", sans-serif;
     font-size: var(--fs-h2);
     font-weight: 600;
-    color: #4f4e4e;
-    background: #f0eee1;
-    border-bottom: 1px solid #e0dcd0;
+    color: var(--text-primary);
+    background: var(--bg-surface);
+    border-bottom: 1px solid var(--border-default);
 }
 
 .standingsTable {
@@ -47,12 +47,12 @@
     text-align: center;
     font-family: "Anonymous Pro", monospace;
     font-size: var(--fs-button);
-    color: #4f4e4e;
+    color: var(--text-primary);
 }
 
 .standingsTable th,
 .standingsTable td {
-    border: 1px solid #ebe8e1;
+    border: 1px solid var(--bg-sunken);
     padding: 0.35rem 0.65rem;
     font-variant-numeric: tabular-nums;
 }
@@ -76,14 +76,14 @@
 }
 
 .standingsTableHeader {
-    background-color: #f0eee1;
+    background-color: var(--bg-surface);
     height: 35px;
     user-select: none;
     -webkit-user-select: none;
     font-family: "Montserrat Alternates", sans-serif;
     font-size: var(--fs-button);
     font-weight: 600;
-    color: #6b6a68;
+    color: var(--text-secondary);
 }
 
 .tasksGroupHeader {
@@ -110,7 +110,7 @@
 }
 
 .canSort:hover {
-    color: #e58995;
+    color: var(--accent);
 }
 
 .headerColumn {
@@ -132,22 +132,22 @@
 .groupChip {
     display: inline-block;
     padding: 0.05em 0.5em;
-    border: 1px solid #c4bfb3;
+    border: 1px solid var(--border-strong);
     border-radius: 0.35rem;
-    background: #fff;
+    background: var(--bg-raised);
     line-height: 1.25;
 }
 
 .groupChip.groupChipFollowed {
-    border-color: #6466fd;
-    background: #6466fd;
-    color: #fbf8f3;
+    border-color: var(--accent);
+    background: var(--accent);
+    color: var(--accent-on);
     font-weight: 600;
 }
 
 .rowFollowedSelf td {
-    border-top: 2px solid #6466fd;
-    border-bottom: 2px solid #6466fd;
+    border-top: 2px solid var(--accent);
+    border-bottom: 2px solid var(--accent);
 }
 
 .taskSolved {
@@ -163,35 +163,35 @@
 
 .taskTime {
     font-size: 0.78em;
-    color: #6b6a68;
+    color: var(--text-secondary);
     line-height: 1.2;
 }
 
 .taskEmpty {
-    color: #6b6a68;
+    color: var(--text-secondary);
 }
 
 .taskFailed {
-    color: #b3261e;
+    color: var(--danger);
     font-weight: 600;
 }
 
 .newRow {
-    background-color: #d4f7d4;
+    background-color: var(--success-bg);
     animation: fadeIn 2s ease;
 }
 
 @keyframes fadeIn {
     0% {
-        background-color: #d4f7d4;
+        background-color: var(--success-bg);
         opacity: 0;
     }
     50% {
-        background-color: #d4f7d4;
+        background-color: var(--success-bg);
         opacity: 0.5;
     }
     100% {
-        background-color: #d4f7d4;
+        background-color: var(--success-bg);
         opacity: 1;
     }
 }
@@ -200,13 +200,13 @@
 .table,
 .table th,
 .table td {
-    border: 1px solid #ebe8e1;
+    border: 1px solid var(--bg-sunken);
     border-collapse: collapse;
     width: fit-content;
     text-align: center;
 }
 
 .tableHeader {
-    background-color: #f0eee1;
+    background-color: var(--bg-surface);
     height: 35px;
 }

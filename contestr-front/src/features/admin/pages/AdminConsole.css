@@ -14,10 +14,10 @@
 .admin-console-tab {
     display: inline-block;
     padding: 0.5rem 1rem;
-    border: 1px solid #e0dcd0;
+    border: 1px solid var(--border-default);
     border-radius: 0.5rem;
-    background: #fff;
-    color: #4f4e4e;
+    background: var(--bg-raised);
+    color: var(--text-primary);
     font-family: "Montserrat Alternates", sans-serif;
     font-size: 0.95rem;
     text-decoration: none;
@@ -25,9 +25,9 @@
 }
 
 .admin-console-tab--active {
-    border-color: #e58995;
-    background: #fff5f6;
-    color: #bf9298;
+    border-color: var(--accent);
+    background: var(--accent-subtle);
+    color: var(--accent);
 }
 
 .admin-console-body {

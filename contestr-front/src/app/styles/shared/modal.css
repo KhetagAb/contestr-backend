@@ -1,0 +1,13 @@
+/* shared/modal.css — .modal-overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--overlay);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem var(--page-gutter);
+  overflow-y: auto;
+  z-index: 100;
+}
+

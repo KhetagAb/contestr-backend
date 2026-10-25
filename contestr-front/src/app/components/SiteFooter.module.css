@@ -3,7 +3,7 @@
     z-index: 1;
     margin-top: var(--space-l);
     padding: var(--space-m) 0 var(--space-s);
-    border-top: 1px solid rgba(107, 106, 104, 0.15);
+    border-top: 1px solid color-mix(in oklch, var(--text-secondary) 15%, transparent);
     text-align: center;
 }
 
@@ -11,17 +11,17 @@
     margin: 0;
     font-family: "Anonymous Pro", sans-serif;
     font-size: var(--step--3);
-    color: #6b6a68;
+    color: var(--text-secondary);
     letter-spacing: 0.02em;
 }
 
 .brand {
     font-family: "Podkova", "Merriweather", Georgia, serif;
     font-size: var(--step--2);
-    color: #bf9298;
+    color: var(--accent);
 }
 
 .separator {
     margin: 0 0.35em;
-    color: rgba(107, 106, 104, 0.45);
+    color: color-mix(in oklch, var(--text-secondary) 45%, transparent);
 }

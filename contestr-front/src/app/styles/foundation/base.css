@@ -1,0 +1,45 @@
+/* foundation/base.css — reset (*, body) */
+
+* { box-sizing: border-box; }
+
+html {
+  background: var(--bg-canvas);
+}
+
+.ai-gradient-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-canvas);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.45;
+}
+
+::selection {
+  background: var(--selection-bg);
+  color: var(--selection-text);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--autofill-text);
+  caret-color: var(--autofill-text);
+  box-shadow: 0 0 0 1000px var(--autofill-bg) inset;
+  transition: background-color 9999s ease-out;
+}
+

@@ -7,7 +7,7 @@
 
 .hint {
     margin: 0.35rem 0 0;
-    color: #6b6860;
+    color: var(--text-secondary);
     font-size: 0.82rem;
 }
 
@@ -17,18 +17,18 @@
     box-sizing: border-box;
     margin-bottom: 0.65rem;
     padding: 0.5rem 0.65rem;
-    border: 1px solid #e0dcd0;
+    border: 1px solid var(--border-default);
     border-radius: 0.4rem;
     font-family: inherit;
     font-size: 0.9rem;
-    background: #fbf8f3;
-    color: #4f4e4e;
+    background: var(--bg-canvas);
+    color: var(--text-primary);
 }
 
 .search:focus {
     outline: none;
-    border-color: #e58995;
-    box-shadow: 0 0 0 2px rgba(229, 137, 149, 0.2);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px color-mix(in oklch, var(--accent) 20%, transparent);
 }
 
 .list {
@@ -57,11 +57,11 @@
 }
 
 .item:hover {
-    background: #f0eee1;
+    background: var(--bg-surface);
 }
 
 .itemSelected {
-    background: #e8e6f8;
+    background: var(--accent-subtle);
 }
 
 .itemName {
@@ -72,7 +72,7 @@
 .itemHandle {
     font-family: "Anonymous Pro", monospace;
     font-size: 0.78rem;
-    color: #6b6860;
+    color: var(--text-secondary);
 }
 
 .clearBtn {
@@ -80,15 +80,15 @@
     margin-top: 0.75rem;
     width: 100%;
     padding: 0.4rem 0.65rem;
-    border: 1px solid #e0dcd0;
+    border: 1px solid var(--border-default);
     border-radius: 0.35rem;
-    background: #fbf8f3;
+    background: var(--bg-canvas);
     font-family: inherit;
     font-size: 0.82rem;
     cursor: pointer;
-    color: #4f4e4e;
+    color: var(--text-primary);
 }
 
 .clearBtn:hover {
-    background: #f0eee1;
+    background: var(--bg-surface);
 }

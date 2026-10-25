@@ -10,7 +10,7 @@ export function AdminSidebarMenu({ session }: Props) {
         <div className="admin-user-popover">
             <p className="admin-user-popover-greeting">
                 Вы вошли как{" "}
-                <span style={{ color: "#6466fd", fontWeight: 600 }}>{session.username}</span>
+                <span style={{ color: "var(--accent)", fontWeight: 600 }}>{session.username}</span>
             </p>
             <a href={ADMIN_TIMETABLE_PATH} className="admin-user-popover-link">
                 Админ-панель
